@@ -1,0 +1,15 @@
+class Score extends Positionable{
+    constructor( position, font, size){
+        super(position);
+        this.font = size + "px" + " " + font;
+        this.size = size;
+        this.value = 0;
+    }
+    increase(){
+        this.value += 1;
+    }
+    draw(context){
+        context.font = this.font;
+        context.fillText(this.value, this.x, this.y);
+    }
+}
